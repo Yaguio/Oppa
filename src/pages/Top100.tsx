@@ -220,7 +220,6 @@ export default function Top100() {
                               src={dorama.image} 
                               alt={dorama.title} 
                               className="w-full h-full object-cover"
-                              referrerPolicy="no-referrer"
                             />
                           </div>
                           <div className="flex-1">

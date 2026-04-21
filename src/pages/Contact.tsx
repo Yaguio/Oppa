@@ -89,7 +89,6 @@ export default function Contact() {
                   src="/banners/contact.png" 
                   alt="Contato Oppa Dorama Club" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
               </div>

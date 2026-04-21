@@ -15,7 +15,6 @@ export default function About() {
               src="/banners/about.png" 
               alt="Oppa Dorama Club Vibe" 
               className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700"
-              referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
           </div>

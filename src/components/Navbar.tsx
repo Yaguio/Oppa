@@ -110,7 +110,6 @@ export default function Navbar() {
               src={logo} 
               alt="Oppa Dorama Club Logo" 
               className="w-full h-full object-contain"
-              referrerPolicy="no-referrer"
             />
           </motion.div>
           <motion.div 

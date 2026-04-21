@@ -11,7 +11,6 @@ export default function Footer() {
               src={logoFooter} 
               alt="Oppa Dorama Club" 
               className="w-full h-auto object-contain"
-              referrerPolicy="no-referrer"
             />
           </div>
         </div>

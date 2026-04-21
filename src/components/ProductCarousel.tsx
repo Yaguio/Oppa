@@ -43,7 +43,6 @@ export default function ProductCarousel() {
                     className={`w-full h-full object-cover transition-transform duration-500 ${
                       product.soldOut ? "grayscale opacity-60" : "group-hover:scale-105"
                     }`}
-                    referrerPolicy="no-referrer"
                   />
 
                   {product.soldOut && (

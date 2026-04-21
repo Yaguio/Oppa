@@ -103,7 +103,6 @@ export default function ProductDetail() {
             src={product.image} 
             alt={product.name}
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
           />
           {product.soldOut && (
             <div className="absolute inset-0 bg-accent/20 backdrop-blur-[2px] flex items-center justify-center">

@@ -81,7 +81,6 @@ export default function Home() {
                 src="/banners/image1.png" 
                 alt="Comunidade Oppa Dorama Club - Melhores Recomendações de Dramas Asiáticos" 
                 className="w-full h-auto object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-rose-200 rounded-full blur-3xl opacity-60"></div>
@@ -117,7 +116,6 @@ export default function Home() {
                       src={item.image} 
                       alt={item.title} 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      referrerPolicy="no-referrer"
                     />
                     <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-primary">
                       {item.category || "Drama"}
@@ -166,7 +164,6 @@ export default function Home() {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  referrerPolicy="no-referrer"
                 />
               </div>
 
