@@ -25,20 +25,6 @@ export default defineConfig(({mode}) => {
     build: {
       target: 'es2015',
       minify: 'terser',
-      chunkSizeWarningLimit: 1000,
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              if (id.includes('react')) return 'vendor-react';
-              if (id.includes('lucide')) return 'vendor-icons';
-              if (id.includes('motion')) return 'vendor-motion';
-              if (id.includes('swiper')) return 'vendor-swiper';
-              return 'vendor';
-            }
-          }
-        }
-      }
     },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
