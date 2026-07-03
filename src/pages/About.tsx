@@ -29,7 +29,7 @@ export default function About() {
           </p>
             <div className="flex gap-4">
               <div className="text-center">
-                <p className="text-3xl font-black text-primary">11k+</p>
+                <p className="text-3xl font-black text-primary">40k+</p>
                 <p className="text-sm text-accent/50 font-medium">Seguidores</p>
               </div>
               <div className="w-px h-12 bg-primary/20"></div>
