@@ -144,7 +144,7 @@ export default function Home() {
       </section>
 
       {/* Instagram Feed Section */}
-      <InstagramFeed username="oppadoramaclub" widgetId="77965b81b8965fc98c2e0b4a1e719ab1" />
+      <InstagramFeed username="oppadoramaclub" />
 
       {/* Subtle Store Showcase */}
       <section className="px-6 py-24">
