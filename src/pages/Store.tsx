@@ -13,6 +13,15 @@ export default function Store() {
   const [filter, setFilter] = useState("Todos");
   const [sortBy, setSortBy] = useState("default"); // default, price-asc, price-desc, name
   const [showFilters, setShowFilters] = useState(false);
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterSent, setNewsletterSent] = useState(false);
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newsletterEmail.trim()) return;
+    setNewsletterSent(true);
+    setNewsletterEmail("");
+  };
 
   const filteredProducts = useMemo(() => {
     let result = [...PRODUCTS];
@@ -175,10 +184,21 @@ export default function Store() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-display font-bold mb-4 text-accent">Ganhe 10% de desconto</h2>
           <p className="text-accent/70 mb-8">Inscreva-se na nossa newsletter e receba ofertas exclusivas da Oppa Store.</p>
-          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input type="email" placeholder="Seu melhor e-mail" className="flex-1 p-4 rounded-2xl border border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary bg-white/60" />
-            <button className="px-8 py-4 bg-primary text-white rounded-2xl font-black shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">Quero meu desconto</button>
-          </form>
+          {newsletterSent ? (
+            <p className="text-primary font-bold text-lg">Recebemos seu e-mail! Fique de olho na sua caixa de entrada. 💌</p>
+          ) : (
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                required
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                placeholder="Seu melhor e-mail"
+                className="flex-1 p-4 rounded-2xl border border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary bg-white/60"
+              />
+              <button type="submit" className="px-8 py-4 bg-primary text-white rounded-2xl font-black shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">Quero meu desconto</button>
+            </form>
+          )}
         </div>
       </section>
     </div>
